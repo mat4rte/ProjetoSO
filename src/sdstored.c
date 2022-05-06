@@ -251,8 +251,8 @@ int main(int argc, char *argv[])
 
         strcpy(comandos_juntos, "\0");
         read(public_fifo, comandos_juntos, 1024);
-        write(1, comandos_juntos, strlen(comandos_juntos));
-        write(1, "\n", 2);
+        // write(1, comandos_juntos, strlen(comandos_juntos));
+        // write(1, "\n", 2);
 
         strcpy(executar, argv[2]);
         num_transformacoes_usadas = 0;
@@ -364,8 +364,8 @@ int main(int argc, char *argv[])
 
                 // Adiciona Task
                 // sprintf(tasks[*num_tarefa], "task #%d: %s\n", *num_tarefa, comandos_juntos);
-                for (int i = 0; i < *num_tarefa; i++)
-                    strcat(tasks[i], comandos[i + 1]);
+                // for (int i = 0; i < *num_tarefa; i++)
+                //     strcat(tasks[i], comandos[i + 1]);
                 // printf("%s\n", tasks[*num_tarefa]);
                 // write(private_pipe, tasks[*num_tarefa], strlen(tasks[*num_tarefa]));
                 *num_tarefa = *num_tarefa + 1;
